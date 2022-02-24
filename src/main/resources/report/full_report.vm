@@ -1,0 +1,471 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:x="urn:schemas-microsoft-com:office:excel">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <xml>
+        <x:ExcelWorkbook>
+            <x:ExcelWorksheets>
+                <x:ExcelWorksheet>
+                    <x:Name>Full Report</x:Name>
+                    <x:WorksheetOptions>
+                        <x:DisplayGridlines/>
+                    </x:WorksheetOptions>
+                </x:ExcelWorksheet>
+            </x:ExcelWorksheets>
+        </x:ExcelWorkbook>
+    </xml>
+    <style>
+        body {
+            font-family: Calibri;
+            font-size: 11pt;
+        }
+
+        th {
+            font-weight: bold;
+            font-size: 14pt;
+        }
+
+        th {
+            border-right: 1px solid #e0e5e7;
+            border-bottom: 1px solid #e0e5e7;
+            padding-right: 10pt;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .border {
+            border: 1px solid black !important;
+        }
+
+        tr td {
+            border: 1px solid black !important;
+        }
+    </style>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1">
+
+    #*Header*#
+    <tr>
+        <th></th>
+        <th colspan="4" style="font-weight: bold; font-size: 15px; min-width: 40px; text-align: center">
+            "Uzbekistan GTL" МЧЖ (__/___/2021)
+        </th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th colspan="4" style="font-weight: bold; font-size: 20px; min-width: 40px; text-align: center">
+            "ТАСДИҚЛАЙМАН"<br/>
+            Бош директорнинг. маҳаллийлаштириш<br/>
+            бўйича биринчи ўринбосари - бош мухандис <br/>
+            МЧЖ "Uzbekistan GTL"
+        </th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th colspan="4" style="font-weight: bold; font-size: 20px; min-width: 40px; text-align: center">
+            _____________О. Каримов
+        </th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th colspan="4" style="font-weight: bold; font-size: 20px; min-width: 40px; text-align: center">
+            "____" _________ 2021й.
+        </th>
+    </tr>
+    <tr></tr>
+    <tr>
+        <th style="font-weight: bold; text-align: center; font-size: 15px;" colspan="14">
+            $date
+        </th>
+    </tr>
+    <tr>
+        <th style="font-weight: bold; text-align: center; font-size: 15px;" colspan="14">
+            Моддий-техник назорат бўлими
+        </th>
+    </tr>
+
+    <tr>
+        <th></th>
+        <th style="font-weight: bold; font-size: 15px; text-align: left;">
+            Счет:
+        </th>
+        <th style="font-weight: bold; font-size: 15px; text-align: left;">
+            014 Балансдан ташқари ҳисобот
+        </th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th style="font-weight: bold; font-size: 15px; text-align: left;">
+            Отд/цех:
+        </th>
+        <th style="font-weight: bold; font-size: 15px; text-align: left;">
+            КИПиА
+        </th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr></tr>
+
+    #*Content*#
+    <tr>
+        <th rowspan="2" class="text-center border">Код</th>
+        <th rowspan="2" class="text-center border">Махсулот номи</th>
+        <th rowspan="2" class="text-center border">Тарқатилган санаси</th>
+        <th rowspan="2" class="text-center border">Ҳисобдан чиқариш санаси</th>
+        <th rowspan="2" class="text-center border">ўл. бирлик</th>
+        <th rowspan="2" class="text-center border">Нархи</th>
+
+        <th colspan="2" class="text-center border">Бошланғич қолдиқ</th>
+
+        <th colspan="2" class="text-center border">Кирим</th>
+
+        <th colspan="2" class="text-center border">Чиқим</th>
+
+        <th colspan="2" class="text-center border">Якуний қолдиқ</th>
+    </tr>
+    <tr>
+
+        <th class="text-center border">сони</th>
+        <th class="text-center border">Жами қиймати</th>
+        <th class="text-center border">Сони</th>
+        <th class="text-center border">Жами қиймати</th>
+        <th class="text-center border">Сони</th>
+        <th class="text-center border">Жами қиймати</th>
+        <th class="text-center border">Сони</th>
+        <th class="text-center border">Жами қиймати</th>
+    </tr>
+    #if($data)
+        #foreach($item in $data)
+            <tr>
+                <td class="text-center">
+                    #if($item.accounTingCode) $item.accounTingCode
+                    #else -
+                    #end
+                </td>
+                <td class="text-center">
+                    #if($item.productName) $item.productName
+                    #else -
+                    #end
+                </td>
+                <td class="text-center">
+                    #if($item.updatedDate) $item.updatedDate
+                    #else -
+                    #end
+                </td>
+                <td class="text-center">
+                    #if($item.creationDate) $item.creationDate
+                    #else -
+                    #end
+                </td>
+                <td class="text-center">
+                    #if($item.nameEn) $item.nameEn
+                    #else -
+                    #end
+                </td>
+                <td class="text-center">
+                    #if($item.price) $item.price
+                    #else -
+                    #end
+                </td>
+
+                #*Boshlang'ich qoldiq*#
+                <td class="text-right">
+                    #if($item.lastProductCount) $item.lastProductCount
+                    #else -
+                    #end
+
+                </td>
+                <td class="text-right">
+                    #if($item.lastTotalPrice) $item.lastTotalPrice
+                    #else -
+                    #end
+                </td>
+
+                #*Kirim*#
+                <td class="text-center">
+                    #if($item.newProductCount) $item.newProductCount
+                    #else -
+                    #end
+                </td>
+                <td class="text-right">
+                    #if($item.newTotalPrice) $item.newTotalPrice
+                    #else -
+                    #end
+                </td>
+
+                #*Chiqim*#
+                <td class="text-center">
+                    #if($item.producedProductCount) $item.producedProductCount
+                    #else -
+                    #end
+
+                </td>
+                <td class="text-center">
+                    #if($item.producedTotalPrice) $item.producedTotalPrice
+                    #else -
+                    #end
+
+                </td>
+
+                #*Yakuniy qoldiq*#
+                <td class="text-center">
+                    #if($item.total) $item.total
+                    #else -
+                    #end
+                </td>
+                <td class="text-right">
+                    #if($item.totalPrice) $item.totalPrice
+                    #else -
+                    #end
+                </td>
+            </tr>
+        #end
+
+        <tr>
+            <td colspan="2" class="text-center" style="font-weight: bold; text-align: center; font-size: 15px;">
+                Жами:
+            </td>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+            #*Boshlang'ich qoldiq*#
+            <td class="text-center">
+                $lastTotalCount
+            </td>
+            <td class="text-center">
+                -
+            </td>
+
+            #*Kirim*#
+            <td class="text-center">
+                $newTotalCount
+            </td>
+            <td class="text-center">
+                -
+            </td>
+
+            #*Chiqim*#
+            <td class="text-center">
+                $producedTotalCount
+            </td>
+            <td class="text-center">
+                -
+            </td>
+
+            #*Yakuniy qoldiq*#
+            <td class="text-center">
+                $totalCount
+            </td>
+
+            <td class="text-center">
+                -
+            </td>
+
+        </tr>
+
+        #*Footer*#
+        <tr></tr>
+
+        <tr>
+            <th></th>
+            <th></th>
+            <th style="font-weight: bold; text-align: left; font-size: 15px;">
+                Тайёрлади:
+            </th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th style="font-weight: bold; text-align: left; font-size: 15px;">
+                Келишилди:
+            </th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        <tr></tr>
+
+        <tr>
+            <th></th>
+            <th></th>
+            <th colspan="3" style="text-align: left; font-size: 15px;">
+                Моддий жавобгар шахс ________________
+            </th>
+
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th colspan="3" style="text-align: left; font-size: 15px;">
+                Ишлаб чиқариш бўйича Директор __________________________
+            </th>
+
+            <th style="font-weight: bold; text-align: left; font-size: 15px;">
+                Кайпназаров К.К
+            </th>
+            <th></th>
+        </tr>
+
+        <tr></tr>
+
+        <tr>
+            <th></th>
+            <th></th>
+            <th style="font-weight: bold; text-align: left; font-size: 15px;">
+                Текширди:
+            </th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        <tr></tr>
+
+        <tr>
+            <th></th>
+            <th></th>
+            <th colspan="2" style="text-align: left; font-size: 15px;">
+                Цех/бўлим бошлиғи __________________
+            </th>
+
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th colspan="3" style="text-align: left; font-size: 15px;">
+                Молиявий директор _________________________
+            </th>
+
+            <th style="font-weight: bold; text-align: left; font-size: 15px;">
+                Насретдинов Н.Т
+            </th>
+            <th></th>
+        </tr>
+
+        <tr></tr>
+
+        <tr>
+            <th></th>
+            <th></th>
+            <th colspan="2" style="text-align: left; font-size: 15px;">
+                Моддий ҳисобчи _________________
+            </th>
+
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        <tr></tr>
+
+        <tr>
+            <th></th>
+            <th></th>
+            <th colspan="2" style="text-align: left; font-size: 15px;">
+                Бош ҳисобчи _________________
+            </th>
+
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    #end
+</table>
+</body>

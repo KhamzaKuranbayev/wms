@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.7.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!-- Insert AUTH_ROLES -->
+    <changeSet id="0000000002-1" author="warehouse">
+        <sql>
+            INSERT INTO public.roles(id, state, code, name, name_en, name_ru, name_uzl)
+            VALUES (1, 'NEW', 'ADMIN', 'ADMIN', 'ADMIN', 'ADMIN', 'ADMIN');
+
+            INSERT INTO public.roles(id, state, code, name, name_en, name_ru, name_uzl)
+            VALUES (2, 'NEW', 'DEPARTMENT', 'DEPARTMENT', 'DEPARTMENT', 'DEPARTMENT', 'DEPARTMENT');
+
+            INSERT INTO public.roles(id, state, code, name, name_en, name_ru, name_uzl)
+            VALUES (3, 'NEW', 'OMTK', 'OMTK', 'OMTK', 'OMTK', 'OMTK');
+
+            INSERT INTO public.roles(id, state, code, name, name_en, name_ru, name_uzl)
+            VALUES (4, 'NEW', 'OZL', 'OZL', 'OZL', 'OZL', 'OZL');
+        </sql>
+    </changeSet>
+</databaseChangeLog>

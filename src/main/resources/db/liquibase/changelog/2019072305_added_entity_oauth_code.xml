@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.7.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!-- Added the entity OAUTH_CODE -->
+    <changeSet id="2019072305-1" author="warehouse">
+        <createTable tableName="OAUTH_CODE">
+            <column name="CODE" type="varchar(255)"/>
+            <column name="AUTHENTICATION" type="BYTEA"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

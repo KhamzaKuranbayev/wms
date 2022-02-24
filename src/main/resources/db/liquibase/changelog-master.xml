@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.7.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!-- Create oauth tables -->
+    <include file="/db/liquibase/changelog/2019072301_added_entity_oauth_client_details.xml" relativeToChangelogFile="false"/>
+    <include file="/db/liquibase/changelog/2019072302_added_entity_oauth_client_token.xml" relativeToChangelogFile="false"/>
+    <include file="/db/liquibase/changelog/2019072303_added_entity_oauth_access_token.xml" relativeToChangelogFile="false"/>
+    <include file="/db/liquibase/changelog/2019072304_added_entity_oauth_refresh_token.xml" relativeToChangelogFile="false"/>
+    <include file="/db/liquibase/changelog/2019072305_added_entity_oauth_code.xml" relativeToChangelogFile="false"/>
+    <include file="/db/liquibase/changelog/2019072306_added_entity_oauth_approvals.xml" relativeToChangelogFile="false"/>
+
+    <!-- Insert oauth client details -->
+    <include file="/db/liquibase/changelog/0000000000_insert_entity_oauth_client_details.xml" relativeToChangelogFile="false"/>
+
+    <!-- Insert hibernate entities -->
+    <include file="/db/liquibase/changelog/0000000001_insert_entity_auth_users.xml" relativeToChangelogFile="false"/>
+    <include file="/db/liquibase/changelog/0000000002_insert_entity_auth_roles.xml" relativeToChangelogFile="false"/>
+    <include file="/db/liquibase/changelog/0000000003_insert_entity_auth_users_roles.xml" relativeToChangelogFile="false"/>
+    <include file="/db/liquibase/changelog/0000000004_insert_entity_auth_permissions.xml" relativeToChangelogFile="false"/>
+    <include file="/db/liquibase/changelog/0000000005_insert_entity_auth_roles_permissions.xml" relativeToChangelogFile="false"/>
+    <include file="/db/liquibase/changelog/0000000006_insert_entity_departments.xml" relativeToChangelogFile="false"/>
+
+</databaseChangeLog>

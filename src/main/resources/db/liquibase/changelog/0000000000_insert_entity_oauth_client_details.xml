@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.7.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!-- Insert OAUTH_CLIENT_DETAILS -->
+    <changeSet id="0000000000-1" author="warehouse">
+        <sql>
+            INSERT INTO public.oauth_client_details(client_id, resource_ids, client_secret, scope, authorized_grant_types,
+            authorities, access_token_validity, refresh_token_validity)
+            VALUES ('spring-security-oauth2-read-write-client', 'resource-server-rest-api',
+            /*spring-security-oauth2-read-write-client-password1234*/'$2a$04$soeOR.QFmClXeFIrhJVLWOQxfHjsJLSpWrU1iGxcMGdu.a5hvfY4W',
+            'read,write', 'password,authorization_code,refresh_token,implicit', 'USER', 10800, 2592000);
+        </sql>
+    </changeSet>
+</databaseChangeLog>

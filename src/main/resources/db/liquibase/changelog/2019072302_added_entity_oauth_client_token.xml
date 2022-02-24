@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.7.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!-- Added the entity OAUTH_CLIENT_TOKEN -->
+    <changeSet id="2019072302-1" author="warehouse">
+        <createTable tableName="OAUTH_CLIENT_TOKEN">
+            <column name="TOKEN_ID" type="varchar(255)"/>
+            <column name="TOKEN" type="BYTEA"/>
+            <column name="AUTHENTICATION_ID" type="varchar(255)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="USER_NAME" type="varchar(255)"/>
+            <column name="CLIENT_ID" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

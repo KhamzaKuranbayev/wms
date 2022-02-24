@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "project.config.file_required",
+      "type": "java.lang.String",
+      "description": "Description for project.config.file_required."
+  }
+] }

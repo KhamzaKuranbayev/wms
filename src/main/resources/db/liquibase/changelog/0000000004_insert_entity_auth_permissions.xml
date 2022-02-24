@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.7.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!-- Insert AUTH_PERMISSIONS -->
+    <changeSet id="0000000004-1" author="warehouse">
+        <sql>
+            <!-- insert permissions -->
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (1, 'NEW', now(), 1, 'PERMISSION', 'Permission', null);
+
+            <!--insert order permissions-->
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (2, 'NEW', now(), 1, 'ORDER', 'Order', null);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (3, 'NEW', now(), 1, 'DEPARTMENT_ORDER_READ', 'Department Order Read', 2);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (4, 'NEW', now(), 1, 'OMTK_ORDER_READ', 'OMTK Order Read', 2);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (5, 'NEW', now(), 1, 'OZL_ORDER_READ', 'OZL Order Read', 2);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (6, 'NEW', now(), 1, 'ORDER_CREATE', 'Order create', 2);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (7, 'NEW', now(), 1, 'ORDER_DELETE', 'Order delete', 2);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (8, 'NEW', now(), 1, 'ORDER_SEND_TO_OMTK', 'Order send to OMTK', 2);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (9, 'NEW', now(), 1, 'ORDER_ADD_FILES', 'Order add files', 2);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (10, 'NEW', now(), 1, 'SEE_ALL_ORDER', 'Order see all', 2);
+
+            <!--insert order item permissions-->
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (11, 'NEW', now(), 1, 'ORDER_ITEM', 'Order Item', null);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (12, 'NEW', now(), 1, 'DEPARTMENT_ORDER_ITEM_READ', 'Department order item read', 11);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (13, 'NEW', now(), 1, 'OMTK_ORDER_ITEM_READ', 'OMTK order item read', 11);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (14, 'NEW', now(), 1, 'OZL_ORDER_ITEM_READ', 'OZL order item read', 11);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (15, 'NEW', now(), 1, 'ORDER_ITEM_CREATE', 'Order item create', 11);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (16, 'NEW', now(), 1, 'ORDER_ITEM_DELETE', 'Order item delete', 11);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (17, 'NEW', now(), 1, 'ORDER_ITEM_UPDATE_COUNT', 'Order item update count', 11);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (18, 'NEW', now(), 1, 'ORDER_ITEM_OPPORTUNITY', 'Order item opportunity', 11);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (19, 'NEW', now(), 1, 'ORDER_ITEM_STATUS_REVIEW', 'Order item status review', 11);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (20, 'NEW', now(), 1, 'ORDER_ITEM_STATUS_ACCEPT', 'Order item status accept', 11);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (21, 'NEW', now(), 1, 'ORDER_ITEM_STATUS_SPECIFICATION', 'Order item status specification', 11);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (22, 'NEW', now(), 1, 'ORDER_ITEM_STATUS_TENDER', 'Order item status tender', 11);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (23, 'NEW', now(), 1, 'ORDER_ITEM_STATUS_REJECT', 'Order item status reject', 11);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (24, 'NEW', now(), 1, 'ORDER_ITEM_STATUS_PENDING_PURCHASE', 'Order item status pending purchase', 11);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (25, 'NEW', now(), 1, 'ORDER_ITEM_STATUS_REJECT_OZL', 'Order item status reject ozl', 11);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (26, 'NEW', now(), 1, 'ORDER_ITEM_STATUS_CONTRACT_CONCLUTION', 'Order item status contract conclution', 11);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (27, 'NEW', now(), 1, 'ORDER_ITEM_STATUS_CONTRACT_TERMINATE', 'Order item status contract terminate', 11);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (28, 'NEW', now(), 1, 'ORDER_ITEM_ATTACH_AKT_FILES', 'Order item attach akt files', 11);
+
+            <!--insert contract permissions-->
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (29, 'NEW', now(), 1, 'CONTRACT', 'Contract', null);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (30, 'NEW', now(), 1, 'CONTRACT_CREATE', 'Contract create', 29);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (31, 'NEW', now(), 1, 'CONTRACT_CREATE_OZL', 'Contract create ozl', 29);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (32, 'NEW', now(), 1, 'CONTRACT_ACCEPT', 'Contract accept', 29);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (33, 'NEW', now(), 1, 'CONTRACT_REJECT', 'Contract reject', 29);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (34, 'NEW', now(), 1, 'CONTRACT_DELETE', 'Contract delete', 29);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (35, 'NEW', now(), 1, 'CONTRACT_AGGREMENT_FILE_ADD', 'Contract aggrement file add', 29);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (36, 'NEW', now(), 1, 'CONTRACT_AGGREMENT_FILE_DELETED', 'Contract aggrement file delete', 29);
+
+            <!--insert contract item permissions-->
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (37, 'NEW', now(), 1, 'CONTRACT_ITEM', 'Contract item', null);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (38, 'NEW', now(), 1, 'CONTRACT_ITEM_ACCEPT', 'Contract item accept', 37);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (39, 'NEW', now(), 1, 'CONTRACT_ITEM_DELETE', 'Contract item delete', 37);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (40, 'NEW', now(), 1, 'CONTRACT_ITEM_REJECT', 'Contract item reject', 37);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (41, 'NEW', now(), 1, 'CONTRACT_ITEM_PART_ACCEPT', 'Contract item part accept', 37);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (42, 'NEW', now(), 1, 'CONTRACT_ITEM_CREATE', 'Contract item create', 37);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (43, 'NEW', now(), 1, 'CONTRACT_ITEM_CREATE_OZL', 'Contract item ozl create', 37);
+
+            <!--insert references, users, realization, inventory, history, index permissions-->
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (44, 'NEW', now(), 1, 'REFERENCE', 'Reference', null);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (45, 'NEW', now(), 1, 'USER', 'User', null);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (46, 'NEW', now(), 1, 'REALIZATION', 'Realization', null);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (47, 'NEW', now(), 1, 'INVENTORY', 'Inventory', null);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (48, 'NEW', now(), 1, 'HISTORY', 'History', null);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (49, 'NEW', now(), 1, 'INDEX', 'Index', null);
+
+            <!--insert product permissions-->
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (50, 'NEW', now(), 1, 'PRODUCT', 'Product', null);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (51, 'NEW', now(), 1, 'PRODUCT_DELETE', 'Product delete', 50);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (52, 'NEW', now(), 1, 'PRODUCT_CREATE', 'Product create', 50);
+
+            <!--insert product item permissions-->
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (53, 'NEW', now(), 1, 'PRODUCT_ITEM', 'Product item', null);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (54, 'NEW', now(), 1, 'PRODUCT_ITEM_SPLIT', 'Product item split', 54);
+
+            <!--insert warehouse permissions-->
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (55, 'NEW', now(), 1, 'WAREHOUSE', 'Warehouse', null);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (56, 'NEW', now(), 1, 'WAREHOUSE_INCOME', 'Warehouse income', 55);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (57, 'NEW', now(), 1, 'SEE_ALL_WAREHOUSE', 'Warehouse see all', 55);
+
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (58, 'NEW', now(), 1, 'SEE_ALL_WAREHOUSE_BY_TEAM', 'Warehouse see all by team', 55);
+
+            <!--insert dashboard permissions-->
+            INSERT INTO public.permission(id, state, creation_date, created_by_user_id, code, name, parent_id)
+            VALUES (59, 'NEW', now(), 1, 'DASHBOARD', 'Dashboard', null);
+
+        </sql>
+    </changeSet>
+</databaseChangeLog>

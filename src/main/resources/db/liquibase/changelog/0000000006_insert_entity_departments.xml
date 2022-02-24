@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.7.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!-- Insert AUTH_ROLES_PERMISSIONS -->
+    <changeSet id="0000000006-1" author="javohir_cumunity">
+        <sql>
+
+            <!--admin department-->
+            INSERT INTO public.department(id, state, name_en, name_ru, name_uz, name_cyrl, dep_type)
+            VALUES (1, 'NEW', 'IT', 'IT', 'IT', 'IT', 'ADMIN');
+
+        </sql>
+    </changeSet>
+</databaseChangeLog>
